@@ -11,7 +11,7 @@ public class TestUtils {
 
         try {
             Field targetField = target.getClass().getDeclaredField(fieldName);
-            if(!targetField.canAccess(target)){
+            if(!targetField.isAccessible()){
                 targetField.setAccessible(true);
                 wasPrivate = true;
             }
