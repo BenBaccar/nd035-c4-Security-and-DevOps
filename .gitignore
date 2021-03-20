@@ -5,3 +5,4 @@
 *.class
 
 starter_code/target/**
+/eCommerceApplication.log
