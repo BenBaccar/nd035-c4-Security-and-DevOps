@@ -1,3 +1,5 @@
+
+## IntelliJ
 .idea/
 *.iws
 *.iml
@@ -5,4 +7,6 @@
 *.class
 
 starter_code/target/**
+
+## Logs
 /eCommerceApplication.log
