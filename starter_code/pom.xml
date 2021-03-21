@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>auth-course</artifactId>
+	<artifactId>e-commerce-app</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>auth-course</name>
-	<description>Demo project for Spring Boot</description>
+	<name>e-commerce-app</name>
+	<description>Final project for Udacity eCommerce Application</description>
 
 
 	<properties>
