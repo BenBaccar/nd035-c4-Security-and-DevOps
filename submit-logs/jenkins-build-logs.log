@@ -1,0 +1,164 @@
+
+Started by user ALM 
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/eCommerce Application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential 6942edcd-0e5f-4b03-901c-b55aa333e8be
+Cloning the remote Git repository
+Cloning repository git@github.com:BenBaccar/nd035-c4-Security-and-DevOps.git
+ > git init /var/jenkins_home/workspace/eCommerce Application # timeout=10
+Fetching upstream changes from git@github.com:BenBaccar/nd035-c4-Security-and-DevOps.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.26.2'
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:BenBaccar/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:BenBaccar/nd035-c4-Security-and-DevOps.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision b92f432de5cce525f009120009b8efaf36a50513 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b92f432de5cce525f009120009b8efaf36a50513 # timeout=10
+Commit message: "change application name"
+ > git rev-list --no-walk 82699e17efd021996204d5d04e82f00bb61a7596 # timeout=10
+Parsing POMs
+Discovered a new module com.example:e-commerce-app e-commerce-app
+Modules changed, recalculating dependency graph
+Established TCP socket on 35289
+[starter_code] $ /opt/java/openjdk//bin/java -cp /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3/boot/plexus-classworlds-2.6.0.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3/conf/logging jenkins.maven3.agent.Maven35Main /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3 /var/jenkins_home/war/WEB-INF/lib/remoting-4.5.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 35289
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f /var/jenkins_home/workspace/eCommerce Application/starter_code/pom.xml clean install package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:e-commerce-app >---------------------
+[INFO] Building e-commerce-app 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ e-commerce-app ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ e-commerce-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ e-commerce-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce Application/starter_code/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ e-commerce-app ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ e-commerce-app ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ e-commerce-app ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:3.3.1:war (default-war) @ e-commerce-app ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [e-commerce-app] in [/var/jenkins_home/workspace/eCommerce Application/starter_code/target/e-commerce-app]
+[INFO] Processing war project
+[INFO] Building war: /var/jenkins_home/workspace/eCommerce Application/starter_code/target/e-commerce-app.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.3:repackage (repackage) @ e-commerce-app ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ e-commerce-app ---
+[INFO] Installing /var/jenkins_home/workspace/eCommerce Application/starter_code/target/e-commerce-app.war to /root/.m2/repository/com/example/e-commerce-app/0.0.1-SNAPSHOT/e-commerce-app-0.0.1-SNAPSHOT.war
+[INFO] Installing /var/jenkins_home/workspace/eCommerce Application/starter_code/pom.xml to /root/.m2/repository/com/example/e-commerce-app/0.0.1-SNAPSHOT/e-commerce-app-0.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ e-commerce-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ e-commerce-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce Application/starter_code/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ e-commerce-app ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ e-commerce-app ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ e-commerce-app ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:3.3.1:war (default-war) @ e-commerce-app ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [e-commerce-app] in [/var/jenkins_home/workspace/eCommerce Application/starter_code/target/e-commerce-app]
+[INFO] Processing war project
+[INFO] Building war: /var/jenkins_home/workspace/eCommerce Application/starter_code/target/e-commerce-app.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.3:repackage (repackage) @ e-commerce-app ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.756 s
+[INFO] Finished at: 2021-03-21T13:09:51Z
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /var/jenkins_home/workspace/eCommerce Application/starter_code/pom.xml to com.example/e-commerce-app/0.0.1-SNAPSHOT/e-commerce-app-0.0.1-SNAPSHOT.pom
+[JENKINS] Archiving /var/jenkins_home/workspace/eCommerce Application/starter_code/target/e-commerce-app.war to com.example/e-commerce-app/0.0.1-SNAPSHOT/e-commerce-app-0.0.1-SNAPSHOT.war
+channel stopped
+SSH: Connecting from host [1d1ce478afdd]
+SSH: Connecting with configuration [Host_2] ...
+SSH: Creating session: username [host2admin], hostname [172.31.45.139], port [22]
+SSH: Connecting session ...
+SSH: Connected
+SSH: Opening SFTP channel ...
+SSH: SFTP channel open
+SSH: Connecting SFTP channel ...
+SSH: Connected
+SSH: Remote root is not absolute, getting absolute directory from PWD
+SSH: cd [/home/host2admin]
+SSH: OK
+SSH: cd [/opt/docker]
+SSH: OK
+SSH: put [e-commerce-app.war]
+SSH: OK
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [docker stop e_commerce_container;  
+docker rm -f  e_commerce_container;
+docker stop  e_commerce_image;  
+docker rm -f  e_commerce_image; 
+docker image rm -f  e_commerce_image; 
+cd /opt/docker; 
+docker build -t  e_commerce_image .] ...
+SSH: EXEC: connected
+e_commerce_container
+e_commerce_container
+Error response from daemon: No such container: e_commerce_image
+Error: No such container: e_commerce_image
+Untagged: e_commerce_image:latest
+Deleted: sha256:4bbe36af008041a3c318aada510fbd6a3470e2a4ca93f487b29fa85e5b4b427f
+Deleted: sha256:3dfc16bedcff272794142f560b680115c3793c55086da5436eab1ee8de5ef77c
+Sending build context to Docker daemon  120.6MB
+
+Step 1/3 : From tomcat:8-jre8
+ ---> 3639174793ba
+Step 2/3 : MAINTAINER "Udacity-BBC"
+ ---> Using cache
+ ---> 28ce01424bec
+Step 3/3 : COPY ./*.war /usr/local/tomcat/webapps/
+ ---> 5a06a955ccb0
+Successfully built 5a06a955ccb0
+Successfully tagged e_commerce_image:latest
+SSH: EXEC: completed after 4,004 ms
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [docker run -d --name  e_commerce_container -p 8888:8080  e_commerce_image] ...
+SSH: EXEC: connected
+da73bcf51c92487e3bc357e034af37b1241f2a4a5555c7c13a36a74a7d2c0ed8
+SSH: EXEC: completed after 801 ms
+SSH: Disconnecting configuration [Host_2] ...
+SSH: Transferred 1 ( 1 + 0 ) file(s)
+Finished: SUCCESS
