@@ -35,13 +35,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
-                .exceptionHandling().authenticationEntryPoint(new AuthenticationEntryPoint() {
-                    @Override
-                    public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-                        LOGGER.error("[Unauthorized] [ACCESS] ERROR: {}", e.getMessage());
-                        httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access Unauthorized");
-                    }
-                 })
+                .exceptionHandling().authenticationEntryPoint((httpServletRequest, httpServletResponse, e) -> {
+                    LOGGER.error("[Unauthorized] [ACCESS] ERROR: {}", e.getMessage());
+                    httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access Unauthorized");
+                })
 
                 .and()
                 .authorizeRequests()
